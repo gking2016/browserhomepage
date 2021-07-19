@@ -1,6 +1,5 @@
 var myVar = setInterval(myTimer, 1000);
-document.getElementById("modes").innerHTML = `<img  style="height: 20px;" src="./sourses/sun.png"/>`;
-var x = document.getElementById("bb"); 
+document.getElementById("modes").innerHTML = `<img  style="height: 20px;" src="./sourses/sun.png"/>`; 
 function myFunction(x) {
   x.classList.toggle("change");
 }
@@ -31,13 +30,6 @@ function myTimer() {
   }
   else{
     if (h-12<10){
-      // if(h-12>6){
-      //   var night = document.getElementById("switch");
-      //   document.getElementById("modes").innerHTML = `<img  style="height: 20px;" src="./sourses/moon.png"/>`;
-      //   document.getElementById("bd").style.backgroundImage = "url(./sourses/ni1.jpg)";
-      //   night.checked == true;
-      // }
-     
         if(m<10)
         {document.getElementById("time").innerHTML = "0"+ String(h-12)+ ":" +"0"+ m + " " +"PM";}
         else{
@@ -60,11 +52,12 @@ function myTimer() {
 //birthday wishchecker
 var bday = String("July 19 " + da);
 var c = months[d.getMonth()] +" " +dy + " " +da;
+var bs = document.getElementById("song")
 
 if ((bday === c) || (bday === "July 192021")){
 document.getElementById("demo").innerHTML = "Happy birthday Bhargavi!!";
-x.play(); 
-x.volume = 0.5;
+bs.play()
+bs.volume = 0.5;
 }
 else{
   document.getElementById("demo").innerHTML = "Hello,Bhargavi Reddy!"
