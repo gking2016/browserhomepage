@@ -50,11 +50,11 @@ function myTimer() {
 
 
 //birthday wishchecker
-var bday = String("July 19 " + da);
+var bday = String("July 20 " + da);
 var c = months[d.getMonth()] +" " +dy + " " +da;
 var bs = document.getElementById("song")
 
-if ((bday === c) || (bday === "July 192021")){
+if ((bday === c) || (bday === "July 202021")){
 document.getElementById("demo").innerHTML = "Happy birthday Bhargavi!!";
 bs.play()
 bs.volume = 0.5;
