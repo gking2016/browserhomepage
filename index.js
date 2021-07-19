@@ -1,10 +1,10 @@
 var myVar = setInterval(myTimer, 1000);
 document.getElementById("modes").innerHTML = `<img  style="height: 20px;" src="./sourses/sun.png"/>`;
-// var name = prompt("Enter ur name!");
+var x = document.getElementById("bb"); 
 function myFunction(x) {
   x.classList.toggle("change");
 }
-// document.getElementById("name").innerHTML = `Hello`+ name
+
 function myTimer() {
   var d = new Date();
   var t = d.toLocaleTimeString();
@@ -31,6 +31,13 @@ function myTimer() {
   }
   else{
     if (h-12<10){
+      // if(h-12>6){
+      //   var night = document.getElementById("switch");
+      //   document.getElementById("modes").innerHTML = `<img  style="height: 20px;" src="./sourses/moon.png"/>`;
+      //   document.getElementById("bd").style.backgroundImage = "url(./sourses/ni1.jpg)";
+      //   night.checked == true;
+      // }
+     
         if(m<10)
         {document.getElementById("time").innerHTML = "0"+ String(h-12)+ ":" +"0"+ m + " " +"PM";}
         else{
@@ -48,15 +55,16 @@ function myTimer() {
  
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];;
-// document.getElementById("demo").innerHTML = days[d.getDay()];
-//   document.getElementById("demo").innerHTML = t;
+
 
 //birthday wishchecker
-var bday = String("July 23 " + da);
+var bday = String("July 19 " + da);
 var c = months[d.getMonth()] +" " +dy + " " +da;
 
-if ((bday === c) || (bday === "July 232021")){
-document.getElementById("demo").innerHTML = "Happy birthday Bhargavi!!"
+if ((bday === c) || (bday === "July 192021")){
+document.getElementById("demo").innerHTML = "Happy birthday Bhargavi!!";
+x.play(); 
+x.volume = 0.5;
 }
 else{
   document.getElementById("demo").innerHTML = "Hello,Bhargavi Reddy!"
@@ -64,17 +72,12 @@ else{
 
 if (dy<10) 
   {document.getElementById("date").innerHTML = months[d.getMonth()] +" " +"0"+dy + " " +da;}
-//   else if (dm<10 && dy>10) 
-//   {document.getElementById("date").innerHTML = dy+":"+"0"+dm+":"+da+","+ days[d.getDay()];}
-//   else if(dy<10 && dm<10)
-//   {document.getElementById("date").innerHTML = "0"+dy+":"+"0"+dm+":"+da+","+ days[d.getDay()];}
+
   else{
     document.getElementById("date").innerHTML = months[d.getMonth()] +" " + dy + " " +da;
   }
-//   document.getElementById("mo").innerHTML = da;
-//   document.getElementById("date").innerHTML = da;
+
 document.getElementById("week").innerHTML = days[d.getDay()].slice(0,3);
-// document.getElementById("time").innerHTML = t;
 
 }
 
